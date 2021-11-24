@@ -122,4 +122,3 @@ def plot():
  
 plot()
 plt.show()
-
