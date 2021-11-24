@@ -1,4 +1,4 @@
-# ******************************************************  Feature Scaling with Python
+# ******************************************************  Feature Scaling with Python *******************************************
 # Application de la normalisation
 import numpy as np
 import matplotlib.pyplot as plt
