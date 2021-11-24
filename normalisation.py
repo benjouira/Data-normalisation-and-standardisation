@@ -72,3 +72,53 @@ print('Valeur minimal et maximal pour la feature MMAX apres min max scaling : \n
  
 print('Affichage des valeurs apres scaling')
 print(df_std)
+
+# *************************************
+
+def plot():
+    plt.figure(figsize=(8,6))
+ 
+    plt.scatter(dataset['MYCT'], dataset['MMAX'],
+            color='green', label='donnees sans transformations', alpha=0.5)
+ 
+ 
+    plt.scatter(df_minmax[:,0], df_minmax[:,1],
+            color='red', label='min-max scaled [min=0, max=1]', alpha=0.3)
+     
+    plt.scatter(df_std[:,0], df_std[:,1],
+            color='blue', label='Standardisation vers la loi Normal X ~ N(0,1)', alpha=0.3)
+ 
+    plt.title('Plot des features MYCT et MMAX avant et apres scaling')
+    plt.xlabel('MYCT')
+    plt.ylabel('MMAX')
+    plt.legend(loc='upper right')
+    plt.grid()
+ 
+    plt.tight_layout()
+ 
+plot()
+plt.show()
+
+# ******************************
+def plot():
+    plt.figure(figsize=(8,6))
+ 
+ 
+    plt.scatter(df_minmax[:,0], df_minmax[:,1],
+            color='red', label='min-max scaled [min=0, max=1]', alpha=0.3)
+    
+    plt.scatter(df_std[:,0], df_std[:,1],
+            color='blue', label='Standardisation vers la loi Normal X ~ N(0,1)', alpha=0.3)
+ 
+     
+  
+    plt.title('Plot des features MYCT et MMAX avant et apres scaling')
+    plt.xlabel('MYCT')
+    plt.ylabel('MMAX')
+    plt.legend(loc='upper right')
+    plt.grid()
+ 
+    plt.tight_layout()
+ 
+plot()
+plt.show()
